@@ -12,26 +12,33 @@ use std::io;
 fn main() {
 
     loop {
+        let mut number_amt: i32 = 0; 
+
+        let invertOne = false; 
+        let invertTwo = false; 
 
         // prompt user instructions 
         // get user input numbers
         let mut line = String::new(); 
-        println!("Enter a string of numbers, either separated by commas, whitespace between numbers, or both. Type 'Q' to quit: ");
-         
+        println!("Enter a string of numbers, either separated by commas, whitespace between numbers, or both. Type 'Q' to quit: ");      
+
         io::stdin()
             .read_line(&mut line)
             .expect("Failed to read line"); 
             
         // split commas, collect values into a vector 
-        let values: Vec<String> = line.trim().split(',').map(|s| s.trim().to_string()).collect(); 
-        
-        // Debug 
-        for (index, value) in values.iter().enumerate() {
-            let number_amt = value.len(); 
-            println!("Value {} is: {}", index + 1, value);
-            print!("Value for value {} is {}\n", index, number_amt);
-        }
+        let values: Vec<String> = line.trim().split(',').map(|s| s.trim().to_string()).collect();  
 
-        // if value of input is 1, output only A, if value of input is 2, input A and B, etc. 
+        // calculate the number of characters in the user input  
+        for (index, value) in values.iter().enumerate() {
+            number_amt = value.len() as i32; 
+        }
+        
+        // process the characters 
+        for string in &values {
+            for character in string.chars() {
+                println!("Character on deck: {}", character); 
+            }
+        }   
     }     
 }
