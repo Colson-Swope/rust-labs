@@ -37,7 +37,21 @@ fn main() {
         // process the characters 
         for string in &values {
             for character in string.chars() {
-                println!("Character on deck: {}", character); 
+                println!("Character on deck: {}", character);
+
+                let mut stringPos = 0; 
+
+                if character == '0' && stringPos == 0 {
+                    println!("A"); 
+                    stringPos += 1; 
+                }
+                if character == '0' && stringPos == 1 {
+                    println!("B"); 
+                    stringPos += 1; 
+                }
+
+                
+
             }
         }   
     }     
