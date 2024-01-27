@@ -29,43 +29,51 @@ fn main() {
         for string in &values {
             
             let mut stringPos = 0; 
+            let mut reachEnd = false; 
 
-            for character in string.chars() {
-                println!("Character on deck: {}", character);                
+            for character in string.chars() {                
 
                 if character == '0' && stringPos == 0 {
-                    println!("A"); 
+                    print!("A"); 
                     stringPos += 1; 
                 }
                 else if character == '1' && stringPos == 0 {
-                    println!("/A"); 
+                    print!("/A"); 
                     stringPos += 1; 
                 }
                 else if character == '0' && stringPos == 1 {
-                    println!("B"); 
+                    print!("B"); 
                     stringPos += 1; 
                 }
                 else if character == '1' && stringPos == 1 {
-                    println!("/B");
+                    print!("/B");
                     stringPos += 1; 
                 }
                 else if character == '0' && stringPos == 2 {
-                    println!("C"); 
+                    print!("C"); 
                     stringPos += 1; 
                 }
                 else if character == '1' && stringPos == 2 {
-                    println!("/C"); 
+                    print!("/C"); 
                     stringPos += 1; 
                 }
                 else if character == '0' && stringPos == 3 {
-                    println!("D");
-                    stringPos += 1; 
+                    print!("D");
+                    stringPos += 1;  
                 }
                 else if character == '1' && stringPos == 3 {
-                    println!("/D");
-                    stringPos += 1; 
+                    print!("/D");
+                    stringPos += 1;  
                 }
             }
+
+            
+            print!(" + "); 
+            
+
+             
         }   
+        
+        println!(); 
     }     
 }
