@@ -20,6 +20,10 @@ fn main() {
         // split commas, collect values into a vector 
         let values: Vec<String> = line.trim().split(',').map(|s| s.trim().to_string()).collect();  
 
+        // count number of items in the vector 
+        let mut itemCounter = values.len(); 
+        println!("There are {} items in this vector", itemCounter); 
+
         // calculate the number of characters in the user input  
         for (index, value) in values.iter().enumerate() {
             number_amt = value.len() as i32; 
@@ -63,15 +67,15 @@ fn main() {
                 }
                 else if character == '1' && stringPos == 3 {
                     print!("/D");
-                    stringPos += 1;  
+                    stringPos += 1;     
                 }
             }
 
-            
-            print!(" + "); 
-            
-
-             
+            if itemCounter > 1 {
+                itemCounter -= 1; 
+                print!(" + "); 
+    
+            } 
         }   
         
         println!(); 
