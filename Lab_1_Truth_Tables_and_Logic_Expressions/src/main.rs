@@ -1,14 +1,5 @@
 use std::io; 
 
-// 10101
-// A/BC/D 
-
-// 00001
-// /A/B/C/D
-
-// 1111
-// ABC
-
 fn main() {
 
     loop {
@@ -36,22 +27,44 @@ fn main() {
         
         // process the characters 
         for string in &values {
-            for character in string.chars() {
-                println!("Character on deck: {}", character);
+            
+            let mut stringPos = 0; 
 
-                let mut stringPos = 0; 
+            for character in string.chars() {
+                println!("Character on deck: {}", character);                
 
                 if character == '0' && stringPos == 0 {
                     println!("A"); 
                     stringPos += 1; 
                 }
-                if character == '0' && stringPos == 1 {
+                else if character == '1' && stringPos == 0 {
+                    println!("/A"); 
+                    stringPos += 1; 
+                }
+                else if character == '0' && stringPos == 1 {
                     println!("B"); 
                     stringPos += 1; 
                 }
-
-                
-
+                else if character == '1' && stringPos == 1 {
+                    println!("/B");
+                    stringPos += 1; 
+                }
+                else if character == '0' && stringPos == 2 {
+                    println!("C"); 
+                    stringPos += 1; 
+                }
+                else if character == '1' && stringPos == 2 {
+                    println!("/C"); 
+                    stringPos += 1; 
+                }
+                else if character == '0' && stringPos == 3 {
+                    println!("D");
+                    stringPos += 1; 
+                }
+                else if character == '1' && stringPos == 3 {
+                    println!("/D");
+                    stringPos += 1; 
+                }
             }
         }   
     }     
