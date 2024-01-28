@@ -33,19 +33,16 @@ fn main() {
         // process the characters 
         for string in &values {
             let mut string_pos = 0;  
-            let mut error_exit = false; 
 
             for character in string.chars() {          
 
-                if character != '0' && character != '1' {
-                    eprintln!("Error: Only 1's and 0's can be used as valid input");
-                    error_exit = true;
-                    break; 
+                if character != '0' && character != '1' { 
+                    eprintln!("Error: Only 1's and 0's are accepted as valid input");
+                    break;
                 }
 
-                if number_amt > 4 { 
-                    println!("Error: Please only enter up to 4 numbers per expression"); 
-                    error_exit = true;
+                if number_amt > 4 {  
+                    eprintln!("Error: Only four characters per input row");   
                     break; 
                 }
 
@@ -75,11 +72,11 @@ fn main() {
                     string_pos += 1; 
                 }
                 else if character == '0' && string_pos == 3 {
-                    println!("D");
+                    print!("D");
                     string_pos += 1;  
                 }
                 else if character == '1' && string_pos == 3 {
-                    println!("/D");
+                    print!("/D");
                     string_pos += 1;     
                 }
                 else {
@@ -87,7 +84,7 @@ fn main() {
                 }
             }
 
-            if item_counter > 1 && error_exit == false {
+            if item_counter > 1 {
                 item_counter -= 1; 
                 print!(" + ");  
             } 
