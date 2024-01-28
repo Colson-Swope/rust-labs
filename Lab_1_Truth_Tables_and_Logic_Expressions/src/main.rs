@@ -9,7 +9,7 @@ fn main() {
         // prompt user instructions 
         // get user input numbers
         let mut line = String::new(); 
-        eprintln!("Enter a string of numbers, either separated by commas, whitespace between numbers, or both. Type 'Q' to quit: ");      
+        println!("Enter a string of numbers, either separated by commas, whitespace between numbers, or both. Type 'Q' to quit: ");      
 
         io::stdin()
             .read_line(&mut line)
