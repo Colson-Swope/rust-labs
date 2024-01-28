@@ -4,6 +4,7 @@ fn main() {
 
     loop {
         let mut number_amt: i32 = 0; 
+        let mut error_flag = false; // flag used to check for errors 
 
         // prompt user instructions 
         // get user input numbers
@@ -38,14 +39,16 @@ fn main() {
 
                 if character != '0' && character != '1' { 
                     eprintln!("Error: Only 1's and 0's are accepted as valid input");
+                    error_flag = true; 
                     break;
                 }
 
                 if number_amt > 4 {  
                     eprintln!("Error: Only four characters per input row");   
+                    error_flag = true; 
                     break; 
                 }
-
+ 
                 if character == '0' && string_pos == 0 {
                     print!("A"); 
                     string_pos += 1; 
@@ -84,12 +87,20 @@ fn main() {
                 }
             }
 
+            if error_flag == true {
+                break; 
+            }
+
             if item_counter > 1 {
                 item_counter -= 1; 
                 print!(" + ");  
             } 
         }   
         
+        if error_flag == true {
+            continue; 
+        }
+
         println!(); 
     }     
 }
