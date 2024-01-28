@@ -32,20 +32,28 @@ fn main() {
         
         // process the characters 
         for string in &values {
-            
             let mut string_pos = 0;  
+            let mut error_exit = false; 
 
             for character in string.chars() {          
 
+                if character != '0' && character != '1' {
+                    println!("Error: Only 1's and 0's can be used as valid input");
+                    error_exit = true;
+                    break; 
+                }
+
                 if number_amt > 4 { 
                     println!("Error: Please only enter up to 4 numbers per expression"); 
-                    break;  
+                    error_exit = true;
+                    break; 
                 }
 
                 if character == '0' && string_pos == 0 {
                     print!("A"); 
                     string_pos += 1; 
                 }
+
                 else if character == '1' && string_pos == 0 {
                     print!("/A"); 
                     string_pos += 1; 
@@ -75,11 +83,11 @@ fn main() {
                     string_pos += 1;     
                 }
                 else {
-                    println!("Error: Only values '0' and '1' are permitted"); 
+                    break; 
                 }
             }
 
-            if item_counter > 1 {
+            if item_counter > 1 && error_exit == false {
                 item_counter -= 1; 
                 print!(" + ");  
             } 
