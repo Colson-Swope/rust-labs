@@ -8,7 +8,7 @@ fn main() {
         // prompt user instructions 
         // get user input numbers
         let mut line = String::new(); 
-        println!("Enter a string of numbers, either separated by commas, whitespace between numbers, or both. Type 'Q' to quit: ");      
+        eprintln!("Enter a string of numbers, either separated by commas, whitespace between numbers, or both. Type 'Q' to quit: ");      
 
         io::stdin()
             .read_line(&mut line)
@@ -38,7 +38,7 @@ fn main() {
             for character in string.chars() {          
 
                 if character != '0' && character != '1' {
-                    println!("Error: Only 1's and 0's can be used as valid input");
+                    eprintln!("Error: Only 1's and 0's can be used as valid input");
                     error_exit = true;
                     break; 
                 }
