@@ -54,6 +54,7 @@ fn main() {
 		// error if user enters foreign character 
                 if character != '0' && character != '1' { 
                     eprintln!("Error: Only 1's and 0's are accepted as valid input");
+                    string_pos = 50;
                     error_flag = true; 
                     break;
                 }
