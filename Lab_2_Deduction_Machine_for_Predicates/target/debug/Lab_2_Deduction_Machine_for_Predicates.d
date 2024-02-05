@@ -1,0 +1,1 @@
+/home/swopec2/Documents/rust-labs/Lab_2_Deduction_Machine_for_Predicates/target/debug/Lab_2_Deduction_Machine_for_Predicates: /home/swopec2/Documents/rust-labs/Lab_2_Deduction_Machine_for_Predicates/src/main.rs
