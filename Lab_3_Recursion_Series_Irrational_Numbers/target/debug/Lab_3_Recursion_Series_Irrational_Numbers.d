@@ -1,0 +1,1 @@
+/home/swopec2/Documents/rust-labs/Lab_3_Recursion_Series_Irrational_Numbers/target/debug/Lab_3_Recursion_Series_Irrational_Numbers: /home/swopec2/Documents/rust-labs/Lab_3_Recursion_Series_Irrational_Numbers/src/main.rs
