@@ -1,0 +1,5 @@
+E Blue 50
+D Green 40
+F Purple 60
+G Black 70 
+E White 80

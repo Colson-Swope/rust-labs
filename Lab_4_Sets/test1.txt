@@ -1,0 +1,5 @@
+A Red 10
+B Orange 20
+C Yellow 30
+D Green 40
+E Blue 50
