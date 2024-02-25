@@ -1,0 +1,9 @@
+[package]
+name = "Lab_5_Relations"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+relations = "0.3.0"

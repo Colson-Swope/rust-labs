@@ -1,0 +1,43 @@
+1. Noticed instructions specify a "functional programming style" must be used 
+
+	- No idea what functional programming is 
+	- Did some research on functional programming and found this article https://shorturl.at/cdX69
+		* Concepts: 
+			- A different method of programming, compared to OOP (Object oriented programming) 
+			- OOP uses mutable data, FP uses immutable data (data which cannot be altered, 
+			must make a copy of the variable that you want to change)
+			- OOP uses the imperative programming model (functions are invariably coded in every step needed to solve 
+			a problem, programmer must know what functions are necessary to solve a problem, rather than relying on 
+			models that can solve the problems) Imperative programs focus on the step-by-step process of solving a 
+			problem  
+			- FP uses declarative programming model, meaning it relies on underlying concepts of a programming languge 
+			to execute necessary steps to reach the predetermined outcome. Declarative programs focus on the 
+			result of solving a problem  
+
+	- Researched some languages that use this style of programming 
+	- Found Haskell, then I found this tutorial https://serokell.io/blog/rust-for-haskellers
+	- Now I have a clearer idea of Functional Programming 
+	- Time to start implementing each step 
+		- **first I implemented the main function using existing Rust knowledge 
+		- used ChatGPT as assistance for the pair input as I ran into a slight issue  
+		* Step 1: 
+			- https://www.geeksforgeeks.org/reflexive-relations/
+			- Determining if a relation is reflexive: check if every element in the set is related to itself 
+			- OOP Method: if for every method a in the set, the pair (a,a) is in the relation, then the relation 
+			is reflexive (return true) 
+			- https://codeburst.io/a-beginner-friendly-intro-to-functional-programming-4f69aa109569 (starting
+			with the function) 		
+			- implemented basic input using prior Rust knowledge 
+			- https://www.geeksforgeeks.org/reflexive-relation-on-set/ (for our reflexive function) 
+			- https://stackoverflow.com/questions/66386013/how-to-iterate-over-two-elements-in-a-collection-stepping-by-one-using-iterator
+		* Step 2: 
+			- https://www.geeksforgeeks.org/symmetric-relation-on-a-set/
+			- Determining if a relation is symmetric: if an ordered pair of elements “a” to “b” (aRb) 
+			is present in relation R, then an ordered pair of elements “b” to “a” (bRa) 
+			should also be present in relation R.
+
+
+
+
+
+ 
